@@ -16,12 +16,17 @@
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "https://sourceforge.net/projects/platformio-storage/files/packages/manifest.json/download",
-    "http://dl.platformio.org/packages/manifest.json"
+    "http://dl.platformio.org/packages/manifest.json",
+	"https://gist.githubusercontent.com/matteofumagalli1275/64f8b9c5de5767939899183c18b8a35d/raw/6229a3e2f615a213a6902795a131a2df451411ae/test.json"
   ],
   "frameworks": {
     "mbed": {
       "package": "framework-mbed",
       "script": "builder/frameworks/mbed/mbed.py"
+    },
+    "gecko-sdk": {
+      "package": "framework-gecko-sdk",
+      "script": "builder/frameworks/gecko-sdk.py"
     }
   },
   "packages": {
@@ -33,6 +38,11 @@
       "type": "framework",
       "optional": true,
       "version": "~3.142.0"
+    },
+    "framework-gecko-sdk": {
+      "type": "framework",
+      "optional": true,
+      "version": "*"
     },
     "tool-openocd": {
       "type": "debugger",

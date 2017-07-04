@@ -1,0 +1,30 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "mcu": "efr32bg1b"
+  },
+  "debug": {
+    "tools": {
+      "jlink": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/board/efm32.cfg"
+          ]
+        },
+        "onboard": true
+      }
+    }
+  },
+  "frameworks": [
+    "gecko-sdk"
+  ],
+  "name": "Silicon Labs EFR32BG1B",
+  "upload": {
+    "maximum_ram_size": 32768,
+    "maximum_size": 262144
+  },
+  "url": "https://developer.mbed.org/platforms/EFM32-Zero-Gecko/",
+  "vendor": "Silicon Labs"
+}
